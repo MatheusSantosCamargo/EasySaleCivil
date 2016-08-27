@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160718231028_added_entity_Lote.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160718231258_added_entity_Empreendimento.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160718231516_added_entity_Imobiliaria.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160718231701_added_entity_Corretor.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160719211706_added_entity_CadastroCliente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20160719215517_added_entity_SituacaoLote.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20160718231028_added_entity_constraints_Lote.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>

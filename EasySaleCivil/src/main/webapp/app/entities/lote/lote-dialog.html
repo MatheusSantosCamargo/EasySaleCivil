@@ -1,0 +1,244 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLoteLabel" translate="easySaleCivilApp.lote.home.createOrEditLabel">Create or edit a Lote</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.lote.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.lote.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.codigo" for="field_codigo">Codigo</label>
+            <input type="text" class="form-control" name="codigo" id="field_codigo"
+                    ng-model="vm.lote.codigo"
+                    required />
+            <div ng-show="editForm.codigo.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.codigo.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.rua" for="field_rua">Rua</label>
+            <input type="text" class="form-control" name="rua" id="field_rua"
+                    ng-model="vm.lote.rua"
+                    required />
+            <div ng-show="editForm.rua.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.rua.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.tamanhoTerreno" for="field_tamanhoTerreno">Tamanho Terreno</label>
+            <input type="number" class="form-control" name="tamanhoTerreno" id="field_tamanhoTerreno"
+                    ng-model="vm.lote.tamanhoTerreno"
+                    required />
+            <div ng-show="editForm.tamanhoTerreno.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tamanhoTerreno.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.tamanhoTerreno.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.tamanhoFrenteTerreno" for="field_tamanhoFrenteTerreno">Tamanho Frente Terreno</label>
+            <input type="number" class="form-control" name="tamanhoFrenteTerreno" id="field_tamanhoFrenteTerreno"
+                    ng-model="vm.lote.tamanhoFrenteTerreno"
+                    required />
+            <div ng-show="editForm.tamanhoFrenteTerreno.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tamanhoFrenteTerreno.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.tamanhoFrenteTerreno.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.distanciaPortaria" for="field_distanciaPortaria">Distancia Portaria</label>
+            <input type="number" class="form-control" name="distanciaPortaria" id="field_distanciaPortaria"
+                    ng-model="vm.lote.distanciaPortaria"
+                    required />
+            <div ng-show="editForm.distanciaPortaria.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.distanciaPortaria.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.distanciaPortaria.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.distanciaEsquinaMaisProxima" for="field_distanciaEsquinaMaisProxima">Distancia Esquina Mais Proxima</label>
+            <input type="number" class="form-control" name="distanciaEsquinaMaisProxima" id="field_distanciaEsquinaMaisProxima"
+                    ng-model="vm.lote.distanciaEsquinaMaisProxima"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.elevacaoTerreno" for="field_elevacaoTerreno">Elevacao Terreno</label>
+            <input type="number" class="form-control" name="elevacaoTerreno" id="field_elevacaoTerreno"
+                    ng-model="vm.lote.elevacaoTerreno"
+                    required />
+            <div ng-show="editForm.elevacaoTerreno.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.elevacaoTerreno.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.elevacaoTerreno.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.posicaoRelacaoAoSol" for="field_posicaoRelacaoAoSol">Posicao Relacao Ao Sol</label>
+            <input type="text" class="form-control" name="posicaoRelacaoAoSol" id="field_posicaoRelacaoAoSol"
+                    ng-model="vm.lote.posicaoRelacaoAoSol"
+                    required />
+            <div ng-show="editForm.posicaoRelacaoAoSol.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.posicaoRelacaoAoSol.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.distanciaAreaLazer" for="field_distanciaAreaLazer">Distancia Area Lazer</label>
+            <input type="number" class="form-control" name="distanciaAreaLazer" id="field_distanciaAreaLazer"
+                    ng-model="vm.lote.distanciaAreaLazer"
+                    required />
+            <div ng-show="editForm.distanciaAreaLazer.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.distanciaAreaLazer.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.distanciaAreaLazer.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.quadra" for="field_quadra">Quadra</label>
+            <input type="text" class="form-control" name="quadra" id="field_quadra"
+                    ng-model="vm.lote.quadra"
+                    required />
+            <div ng-show="editForm.quadra.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.quadra.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.valorTotal" for="field_valorTotal">Valor Total</label>
+            <input type="number" class="form-control" name="valorTotal" id="field_valorTotal"
+                    ng-model="vm.lote.valorTotal"
+                    required />
+            <div ng-show="editForm.valorTotal.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.valorTotal.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.valorTotal.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.valorEntrada" for="field_valorEntrada">Valor Entrada</label>
+            <input type="number" class="form-control" name="valorEntrada" id="field_valorEntrada"
+                    ng-model="vm.lote.valorEntrada"
+                    required />
+            <div ng-show="editForm.valorEntrada.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.valorEntrada.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.valorEntrada.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.lote.taxaJuros" for="field_taxaJuros">Taxa Juros</label>
+            <input type="number" class="form-control" name="taxaJuros" id="field_taxaJuros"
+                    ng-model="vm.lote.taxaJuros"
+                    required />
+            <div ng-show="editForm.taxaJuros.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.taxaJuros.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.taxaJuros.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label translate="easySaleCivilApp.lote.imobiliaria" for="field_imobiliaria">Imobiliaria</label>
+            <select class="form-control" id="field_imobiliaria" name="imobiliaria" ng-model="vm.lote.imobiliaria" ng-options="imobiliaria as imobiliaria.nome for imobiliaria in vm.imobiliarias track by imobiliaria.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.imobiliaria.$invalid">
+            <p class="help-block"
+                ng-show="editForm.imobiliaria.$error.required" translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label translate="easySaleCivilApp.lote.empreendimento" for="field_empreendimento">Empreendimento</label>
+            <select class="form-control" id="field_empreendimento" name="empreendimento" ng-model="vm.lote.empreendimento" ng-options="empreendimento as empreendimento.nome for empreendimento in vm.empreendimentos track by empreendimento.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.empreendimento.$invalid">
+            <p class="help-block"
+                ng-show="editForm.empreendimento.$error.required" translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label translate="easySaleCivilApp.lote.situacaoLote" for="field_situacaoLote">Situacao Lote</label>
+            <select class="form-control" id="field_situacaoLote" name="situacaoLote" ng-model="vm.lote.situacaoLote" ng-options="situacaoLote as situacaoLote.situacao for situacaoLote in vm.situacaolotes | orderBy:'id' track by situacaoLote.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.situacaoLote.$invalid">
+            <p class="help-block"
+                ng-show="editForm.situacaoLote.$error.required" translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

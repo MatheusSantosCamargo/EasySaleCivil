@@ -1,0 +1,90 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEmpreendimentoLabel" translate="easySaleCivilApp.empreendimento.home.createOrEditLabel">Create or edit a Empreendimento</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.empreendimento.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.empreendimento.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.empreendimento.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                    ng-model="vm.empreendimento.nome"
+                    required />
+            <div ng-show="editForm.nome.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nome.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.empreendimento.localizacao" for="field_localizacao">Localizacao</label>
+            <input type="text" class="form-control" name="localizacao" id="field_localizacao"
+                    ng-model="vm.empreendimento.localizacao"
+                    required />
+            <div ng-show="editForm.localizacao.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.localizacao.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.empreendimento.indCondominioFechado" for="field_indCondominioFechado">Ind Condominio Fechado</label>
+            <input type="checkbox" class="form-control" name="indCondominioFechado" id="field_indCondominioFechado"
+                    ng-model="vm.empreendimento.indCondominioFechado"
+                     />
+            <div ng-show="editForm.indCondominioFechado.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.indCondominioFechado.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.empreendimento.distanciaCentroCidade" for="field_distanciaCentroCidade">Distancia Centro Cidade</label>
+            <input type="number" class="form-control" name="distanciaCentroCidade" id="field_distanciaCentroCidade"
+                    ng-model="vm.empreendimento.distanciaCentroCidade"
+                    required />
+            <div ng-show="editForm.distanciaCentroCidade.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.distanciaCentroCidade.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.distanciaCentroCidade.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.empreendimento.caminhoImagemEmpreendimento" for="field_caminhoImagemEmpreendimento">Caminho Imagem Empreendimento</label>
+            <input type="text" class="form-control" name="caminhoImagemEmpreendimento" id="field_caminhoImagemEmpreendimento"
+                    ng-model="vm.empreendimento.caminhoImagemEmpreendimento"
+                    required />
+            <div ng-show="editForm.caminhoImagemEmpreendimento.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.caminhoImagemEmpreendimento.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

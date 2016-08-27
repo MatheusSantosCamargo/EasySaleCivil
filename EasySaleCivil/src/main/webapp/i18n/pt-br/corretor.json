@@ -1,0 +1,28 @@
+{
+    "easySaleCivilApp": {
+        "corretor" : {
+            "home": {
+                "title": "Corretores",
+                "createLabel": "Criar novo corretor",
+                "createOrEditLabel": "Criar ou editar Corretor",
+                "search": "Pesquisar por Corretor"
+            },
+            "created": "Um novo Corretor é criado com o identificador {{ param }}",
+            "updated": "Um Corretor é atualizado com o identificador {{ param }}",
+            "deleted": "Um Corretor é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Corretor {{ id }}?"
+            },
+            "detail": {
+                "title": "Corretor"
+            },
+            "nome": "Nome",
+            "creci": "CRECI",
+            "primeiroTelefone": "Primeiro Telefone",
+            "segundoTelefone": "Segundo Telefone",
+            "primeiroEmail": "Primeiro Email",
+            "segundoEmail": "Segundo Email",
+            "imobiliaria": "Imobiliaria"
+        }
+    }
+}

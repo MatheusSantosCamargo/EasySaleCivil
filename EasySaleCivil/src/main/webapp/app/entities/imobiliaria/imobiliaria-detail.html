@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="easySaleCivilApp.imobiliaria.detail.title">Imobiliaria</span> {{vm.imobiliaria.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="easySaleCivilApp.imobiliaria.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.imobiliaria.nome}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.imobiliaria.endereco">Endereco</span></dt>
+        <dd>
+            <span>{{vm.imobiliaria.endereco}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.imobiliaria.telefone">Telefone</span></dt>
+        <dd>
+            <span>{{vm.imobiliaria.telefone}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.imobiliaria.nomeResponsavel">Nome Responsavel</span></dt>
+        <dd>
+            <span>{{vm.imobiliaria.nomeResponsavel}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.imobiliaria.creciResponsavel">Creci Responsavel</span></dt>
+        <dd>
+            <span>{{vm.imobiliaria.creciResponsavel}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.imobiliaria.indAtiva">Ind Ativa</span></dt>
+        <dd>
+            <span>{{vm.imobiliaria.indAtiva}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

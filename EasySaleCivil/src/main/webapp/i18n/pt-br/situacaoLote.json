@@ -1,0 +1,23 @@
+{
+    "easySaleCivilApp": {
+        "situacaoLote" : {
+            "home": {
+                "title": "Situacao Lotes",
+                "createLabel": "Criar novo Situacao Lote",
+                "createOrEditLabel": "Criar ou editar Situacao Lote",
+                "search": "Pesquisar por Situacao Lote"
+            },
+            "created": "Um novo Situacao Lote é criado com o identificador {{ param }}",
+            "updated": "Um Situacao Lote é atualizado com o identificador {{ param }}",
+            "deleted": "Um Situacao Lote é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Situacao Lote {{ id }}?"
+            },
+            "detail": {
+                "title": "Situacao Lote"
+            },
+            "situacao": "Situacao",
+            "cor": "Cor"
+        }
+    }
+}

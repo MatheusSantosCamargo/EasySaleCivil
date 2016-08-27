@@ -1,0 +1,53 @@
+{
+    "relationships": [
+        {
+            "relationshipName": "imobiliaria",
+            "otherEntityName": "imobiliaria",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "corretor"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "creci",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "primeiroTelefone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "segundoTelefone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "primeiroEmail",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "segundoEmail",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20160718231701",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "corretor",
+    "pagination": "no"
+}

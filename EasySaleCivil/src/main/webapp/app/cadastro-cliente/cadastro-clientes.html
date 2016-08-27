@@ -1,0 +1,97 @@
+<div>
+    <h2 translate="easySaleCivilApp.cadastroCliente.home.title">Cadastro Clientes</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="cadastro-cliente.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="easySaleCivilApp.cadastroCliente.home.createLabel">
+                        Create new Cadastro Cliente
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'easySaleCivilApp.cadastroCliente.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.nome">Nome</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.cpf_cpnj">Cpf Cpnj</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.rg">Rg</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.rua">Rua</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.bairro">Bairro</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.numero">Numero</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.complemento">Complemento</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.cidade">Cidade</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.cep">Cep</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.estado">Estado</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.telefone">Telefone</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.celular">Celular</span></th>
+                    <th><span translate="easySaleCivilApp.cadastroCliente.email">Email</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="cadastroCliente in vm.cadastroClientes track by cadastroCliente.id">
+                    <td><a ui-sref="cadastro-cliente-detail({id:cadastroCliente.id})">{{cadastroCliente.id}}</a></td>
+                    <td>{{cadastroCliente.nome}}</td>
+                    <td>{{cadastroCliente.cpf_cpnj}}</td>
+                    <td>{{cadastroCliente.rg}}</td>
+                    <td>{{cadastroCliente.rua}}</td>
+                    <td>{{cadastroCliente.bairro}}</td>
+                    <td>{{cadastroCliente.numero}}</td>
+                    <td>{{cadastroCliente.complemento}}</td>
+                    <td>{{cadastroCliente.cidade}}</td>
+                    <td>{{cadastroCliente.cep}}</td>
+                    <td>{{cadastroCliente.estado}}</td>
+                    <td>{{cadastroCliente.telefone}}</td>
+                    <td>{{cadastroCliente.celular}}</td>
+                    <td>{{cadastroCliente.email}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="cadastro-cliente-detail({id:cadastroCliente.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cadastro-cliente.edit({id:cadastroCliente.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="cadastro-cliente.delete({id:cadastroCliente.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

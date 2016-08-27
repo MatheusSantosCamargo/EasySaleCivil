@@ -1,0 +1,10 @@
+version: '2'
+services:
+    easysalecivil-elasticsearch:
+        container_name: easysalecivil-elasticsearch
+        image: elasticsearch:1.7.5
+        # volumes:
+        #     - ~/volumes/jhipster/EasySaleCivil/elasticsearch/:/usr/share/elasticsearch/data/
+        ports:
+            - 9200:9200
+            - 9300:9300

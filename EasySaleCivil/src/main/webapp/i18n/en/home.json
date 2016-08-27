@@ -1,0 +1,13 @@
+{
+    "home": {
+        "title": "Welcome to EasySale Civil!",
+        "subtitle": "Your allotments sales facilitator ",
+        "logged": {
+            "message": "You are logged in as user \"{{username}}\"."
+        },
+        "question": "If you have any question on EasySale Civil:",
+        "link": {
+            "email": "My e-mail: matheus.camargo04@hotmail.com"
+        }
+    }
+}

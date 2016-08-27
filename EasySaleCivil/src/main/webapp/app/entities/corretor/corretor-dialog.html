@@ -1,0 +1,86 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCorretorLabel" translate="easySaleCivilApp.corretor.home.createOrEditLabel">Create or edit a Corretor</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.corretor.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.corretor.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.corretor.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                    ng-model="vm.corretor.nome"
+                    required />
+            <div ng-show="editForm.nome.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nome.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.corretor.creci" for="field_creci">Creci</label>
+            <input type="text" class="form-control" name="creci" id="field_creci"
+                    ng-model="vm.corretor.creci"
+                    required />
+            <div ng-show="editForm.creci.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.creci.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.corretor.primeiroTelefone" for="field_primeiroTelefone">Primeiro Telefone</label>
+            <input type="text" class="form-control" name="primeiroTelefone" id="field_primeiroTelefone"
+                    ng-model="vm.corretor.primeiroTelefone"
+                    required />
+            <div ng-show="editForm.primeiroTelefone.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.primeiroTelefone.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.corretor.segundoTelefone" for="field_segundoTelefone">Segundo Telefone</label>
+            <input type="text" class="form-control" name="segundoTelefone" id="field_segundoTelefone"
+                    ng-model="vm.corretor.segundoTelefone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.corretor.primeiroEmail" for="field_primeiroEmail">Primeiro Email</label>
+            <input type="text" class="form-control" name="primeiroEmail" id="field_primeiroEmail"
+                    ng-model="vm.corretor.primeiroEmail"
+                    required />
+            <div ng-show="editForm.primeiroEmail.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.primeiroEmail.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.corretor.segundoEmail" for="field_segundoEmail">Segundo Email</label>
+            <input type="text" class="form-control" name="segundoEmail" id="field_segundoEmail"
+                    ng-model="vm.corretor.segundoEmail"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

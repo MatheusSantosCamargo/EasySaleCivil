@@ -1,0 +1,22 @@
+
+<div>
+    <h2><span translate="easySaleCivilApp.situacaoLote.detail.title">Situacao Lote</span> {{vm.situacaoLote.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="easySaleCivilApp.situacaoLote.situacao">Situacao</span></dt>
+        <dd>
+            <span>{{vm.situacaoLote.situacao}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.situacaoLote.cor">Cor</span></dt>
+        <dd>
+            <span>{{vm.situacaoLote.cor}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

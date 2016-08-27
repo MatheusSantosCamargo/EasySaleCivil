@@ -1,0 +1,26 @@
+{
+    "easySaleCivilApp": {
+        "empreendimento" : {
+            "home": {
+                "title": "Empreendimentos",
+                "createLabel": "Criar novo Empreendimento",
+                "createOrEditLabel": "Criar ou editar Empreendimento",
+                "search": "Pesquisar por Empreendimento"
+            },
+            "created": "Um novo Empreendimento é criado com o identificador {{ param }}",
+            "updated": "Um Empreendimento é atualizado com o identificador {{ param }}",
+            "deleted": "Um Empreendimento é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Empreendimento {{ id }}?"
+            },
+            "detail": {
+                "title": "Empreendimento"
+            },
+            "nome": "Nome",
+            "localizacao": "Localizacao",
+            "indCondominioFechado": "Ind Condominio Fechado",
+            "distanciaCentroCidade": "Distancia Centro Cidade",
+            "caminhoImagemEmpreendimento": "Caminho Imagem Empreendimento"
+        }
+    }
+}

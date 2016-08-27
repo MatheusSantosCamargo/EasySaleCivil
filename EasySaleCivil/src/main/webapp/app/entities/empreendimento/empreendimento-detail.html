@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span translate="easySaleCivilApp.empreendimento.detail.title">Empreendimento</span> {{vm.empreendimento.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="easySaleCivilApp.empreendimento.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.empreendimento.nome}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.empreendimento.localizacao">Localizacao</span></dt>
+        <dd>
+            <span>{{vm.empreendimento.localizacao}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.empreendimento.indCondominioFechado">Ind Condominio Fechado</span></dt>
+        <dd>
+            <span>{{vm.empreendimento.indCondominioFechado}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.empreendimento.distanciaCentroCidade">Distancia Centro Cidade</span></dt>
+        <dd>
+            <span>{{vm.empreendimento.distanciaCentroCidade}}</span>
+        </dd>
+        <dt><span translate="easySaleCivilApp.empreendimento.caminhoImagemEmpreendimento">Caminho Imagem Empreendimento</span></dt>
+        <dd>
+            <span>{{vm.empreendimento.caminhoImagemEmpreendimento}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

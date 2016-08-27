@@ -1,0 +1,27 @@
+{
+    "easySaleCivilApp": {
+        "imobiliaria" : {
+            "home": {
+                "title": "Imobiliarias",
+                "createLabel": "Criar novo Imobiliaria",
+                "createOrEditLabel": "Criar ou editar Imobiliaria",
+                "search": "Pesquisar por Imobiliaria"
+            },
+            "created": "Um novo Imobiliaria é criado com o identificador {{ param }}",
+            "updated": "Um Imobiliaria é atualizado com o identificador {{ param }}",
+            "deleted": "Um Imobiliaria é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Imobiliaria {{ id }}?"
+            },
+            "detail": {
+                "title": "Imobiliaria"
+            },
+            "nome": "Nome",
+            "endereco": "Endereco",
+            "telefone": "Telefone",
+            "nomeResponsavel": "Nome Responsavel",
+            "creciResponsavel": "Creci Responsavel",
+            "indAtiva": "Ind Ativa"
+        }
+    }
+}

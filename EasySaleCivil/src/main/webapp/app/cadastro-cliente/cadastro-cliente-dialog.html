@@ -1,0 +1,166 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myCadastroClienteLabel" translate="easySaleCivilApp.cadastroCliente.home.createOrEditLabel">Create or edit a Cadastro Cliente</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.cadastroCliente.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.cadastroCliente.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                    ng-model="vm.cadastroCliente.nome"
+                    required />
+            <div ng-show="editForm.nome.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nome.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.cpf_cpnj" for="field_cpf_cpnj">Cpf Cpnj</label>
+            <input type="text" class="form-control" name="cpf_cpnj" id="field_cpf_cpnj"
+                    ng-model="vm.cadastroCliente.cpf_cpnj"
+                    required ng-minlength="11" ng-maxlength="14" />
+            <div ng-show="editForm.cpf_cpnj.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cpf_cpnj.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.cpf_cpnj.$error.minlength" translate="entity.validation.minlength" translate-value-min="11">
+                    This field is required to be at least 11 characters.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.cpf_cpnj.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="14">
+                    This field cannot be longer than 14 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.rg" for="field_rg">Rg</label>
+            <input type="text" class="form-control" name="rg" id="field_rg"
+                    ng-model="vm.cadastroCliente.rg"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.rua" for="field_rua">Rua</label>
+            <input type="text" class="form-control" name="rua" id="field_rua"
+                    ng-model="vm.cadastroCliente.rua"
+                    required />
+            <div ng-show="editForm.rua.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.rua.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.bairro" for="field_bairro">Bairro</label>
+            <input type="text" class="form-control" name="bairro" id="field_bairro"
+                    ng-model="vm.cadastroCliente.bairro"
+                    required />
+            <div ng-show="editForm.bairro.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.bairro.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.numero" for="field_numero">Numero</label>
+            <input type="text" class="form-control" name="numero" id="field_numero"
+                    ng-model="vm.cadastroCliente.numero"
+                    required />
+            <div ng-show="editForm.numero.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.numero.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.complemento" for="field_complemento">Complemento</label>
+            <input type="text" class="form-control" name="complemento" id="field_complemento"
+                    ng-model="vm.cadastroCliente.complemento"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.cidade" for="field_cidade">Cidade</label>
+            <input type="text" class="form-control" name="cidade" id="field_cidade"
+                    ng-model="vm.cadastroCliente.cidade"
+                    required />
+            <div ng-show="editForm.cidade.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cidade.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.cep" for="field_cep">Cep</label>
+            <input type="text" class="form-control" name="cep" id="field_cep"
+                    ng-model="vm.cadastroCliente.cep"
+                    required />
+            <div ng-show="editForm.cep.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cep.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.estado" for="field_estado">Estado</label>
+            <input type="text" class="form-control" name="estado" id="field_estado"
+                    ng-model="vm.cadastroCliente.estado"
+                    required />
+            <div ng-show="editForm.estado.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.estado.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.telefone" for="field_telefone">Telefone</label>
+            <input type="text" class="form-control" name="telefone" id="field_telefone"
+                    ng-model="vm.cadastroCliente.telefone"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.celular" for="field_celular">Celular</label>
+            <input type="text" class="form-control" name="celular" id="field_celular"
+                    ng-model="vm.cadastroCliente.celular"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="easySaleCivilApp.cadastroCliente.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.cadastroCliente.email"
+                    required />
+            <div ng-show="editForm.email.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.email.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

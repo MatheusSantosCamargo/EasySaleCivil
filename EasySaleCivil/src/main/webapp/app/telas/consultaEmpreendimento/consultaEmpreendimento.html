@@ -1,0 +1,34 @@
+<div ng-cloak>
+    <div class="row">
+        <div class="col-md-4">
+            <span class="hipster img-responsive img-rounded"></span>
+        </div>
+        <div class="col-md-8">
+            <h3 translate="home.title">Consulte aqui os lotes de cada empreendimento!</h3>
+		    <div class="form-group">
+            <label translate="home.titleComboboxEmpreendimento" for="field_empreendimento">Empreendimento</label>
+            <select class="form-control" id="field_empreendimento" name="empreendimento" ng-model="vm.empreendimentoEscolhido" ng-options="empreendimento.nome for empreendimento in vm.empreendimentos" required>
+                <option value=""></option>
+            </select>
+            <br/>
+		    <div class="form-group" ng-show="vm.verificaComboPreenchido()">
+            <label translate="home.titleComboboxLote" for="field_lote">Lotes</label>
+            <span  class="input-group-btn width-min" >
+                <button class="btn btn-info" ng-click="vm.buscaLotePorEmpreendimento()">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+            {{vm.empreendimentoEscolhido.id}}
+            asdasd
+            asdasd
+            {{vm.lotes}}
+            <select class="form-control" id="field_lote" name="lote" ng-model="vm.loteEscolhido" ng-options="lote.codigo for lote in vm.lotes" required>
+                <option value=""></option>
+            </select>
+        	</div>
+        	<br/>
+        	<img src="{{vm.empreendimentoEscolhido.caminhoImagemEmpreendimento}}" class="img-responsive img-centered">
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,38 @@
+{
+    "easySaleCivilApp": {
+        "lote" : {
+            "home": {
+                "title": "Lotes",
+                "createLabel": "Criar novo Lote",
+                "createOrEditLabel": "Criar ou editar Lote",
+                "search": "Pesquisar por Lote"
+            },
+            "created": "Um novo Lote é criado com o identificador {{ param }}",
+            "updated": "Um Lote é atualizado com o identificador {{ param }}",
+            "deleted": "Um Lote é deletado com o identificador {{ param }}",
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Lote {{ id }}?"
+            },
+            "detail": {
+                "title": "Lote"
+            },
+            "codigo": "Codigo",
+            "disponibilidade": "Disponibilidade do Lote",
+            "rua": "Rua",
+            "tamanhoTerreno": "Tamanho Terreno",
+            "tamanhoFrenteTerreno": "Tamanho Frente Terreno",
+            "distanciaPortaria": "Distancia Portaria",
+            "distanciaEsquinaMaisProxima": "Distancia Esquina Mais Proxima",
+            "elevacaoTerreno": "Elevacao Terreno",
+            "posicaoRelacaoAoSol": "Posicao Relacao Ao Sol",
+            "distanciaAreaLazer": "Distancia Area Lazer",
+            "quadra": "Quadra",
+            "valorTotal": "Valor Total",
+            "valorEntrada": "Valor Entrada",
+            "taxaJuros": "Taxa Juros",
+            "imobiliaria": "Imobiliaria",
+            "empreendimento": "Empreendimento",
+            "situacaoLote": "Situacao Lote"
+        }
+    }
+}
